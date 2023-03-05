@@ -152,7 +152,7 @@ public class SpotifyRepository {
                 return playlist;
             }
         }
-        throw new Exception("User does not exists");
+        throw new Exception("User does not exist");
     }
 
     public Playlist createPlaylistOnName(String mobile, String title, List<String> songTitles) throws Exception
@@ -227,10 +227,10 @@ public class SpotifyRepository {
                         return playlist;
                     }
                 }
-                throw new Exception("user does not exists");
+                throw new Exception("User does not exist");
             }
         }
-        throw new Exception("Playslist does not exist");
+        throw new Exception("Playlist does not exist");
     }
 
     public Song likeSong(String mobile, String songTitle) throws Exception
