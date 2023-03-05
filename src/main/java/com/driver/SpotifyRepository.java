@@ -193,7 +193,7 @@ public class SpotifyRepository {
                 return playlist;
             }
         }
-        throw new Exception("User does not exists");
+        throw new Exception("User does not exist");
     }
 
     public Playlist findPlaylist(String mobile, String playlistTitle) throws Exception
