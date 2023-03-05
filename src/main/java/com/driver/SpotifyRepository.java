@@ -103,6 +103,11 @@ public class SpotifyRepository {
 
     public Playlist createPlaylistOnLength(String mobile, String title, int length) throws Exception
     {
+        for(Playlist playlist : playlists)
+        {
+            if(playlist.getTitle().equals(title))
+                return  playlist;
+        }
         List<Song> list = new ArrayList<>();
         for(Song song : songs)
         {
