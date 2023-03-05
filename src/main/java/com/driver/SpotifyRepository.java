@@ -39,6 +39,12 @@ public class SpotifyRepository {
 
     public User createUser(String name, String mobile)
     {
+        for(User curUser: users)
+        {
+            if(curUser.getMobile().equals(mobile)){
+                return curUser;
+            }
+        }
         User user = new User(name, mobile);
         users.add(user);
         return user;
@@ -46,6 +52,11 @@ public class SpotifyRepository {
 
     public Artist createArtist(String name)
     {
+        for(Artist artist: artists)
+        {
+            if(artist.getName().equals(name))
+                return artist;
+        }
         Artist artist = new Artist(name);
         artists.add(artist);
         return artist;
@@ -53,6 +64,11 @@ public class SpotifyRepository {
 
     public Album createAlbum(String title, String artistName)
     {
+        for(Album album : albums)
+        {
+            if(album.getTitle().equals(title))
+                return  album;
+        }
         for(Artist artist : artists)
         {
             if(artist.getName().equals(artistName))
@@ -141,6 +157,11 @@ public class SpotifyRepository {
 
     public Playlist createPlaylistOnName(String mobile, String title, List<String> songTitles) throws Exception
     {
+        for(Playlist playlist : playlists)
+        {
+            if(playlist.getTitle().equals(title))
+                return  playlist;
+        }
         Playlist playlist = new Playlist(title);
         playlists.add(playlist);
 
